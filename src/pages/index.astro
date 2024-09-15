@@ -1,14 +1,116 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import Card from '../components/Card.astro'
 import NavBar from '../components/NavBar.astro'
+import Card from '../components/Card.astro'
+import Footer from '../components/Footer.astro'
+
+const { default: innerHTML } = await import(`../assets/logo.svg?raw`)
+
+const products = [
+	{
+		image: './portada/ejemplo1.png',
+		title: 'Sudaderas',
+		description: 'Sudaderas de diferentes tallas y colores con grandes estilos y diseños',
+	},
+	{
+		image: './portada/ejemplo2.png',
+		title: 'Tazas',
+		description: 'Bonitas tazas de diferentes onzas para poder personalizar a tu gusto.',
+	},
+	{
+		image: './portada/ejemplo3.png',
+		title: 'Termos',
+		description: 'Termos de diferentes tamaños y colors para poder personalizar a tu gusto.',
+	},
+	{
+		image: './portada/ejemplo4.png',
+		title: 'Gorras',
+		description: 'Bonitas gorras de tallas y colores para poder personalizar a tu gusto.',
+	},
+	{
+		image: './portada/ejemplo5.png',
+		title: 'Camisas',
+		description: 'Camisas de todas tallas para ponerle tu estilo a tu ropa o uniformes.',
+	},
+	{
+		image: './portada/ejemplo6.png',
+		title: 'Camisas',
+		description: 'Camisas de todas tallas para ponerle tu estilo a tu ropa o uniformes.',
+	},
+	{
+		image: './portada/ejemplo7.png',
+		title: 'Camisas',
+		description: 'Camisas de todas tallas para ponerle tu estilo a tu ropa o uniformes.',
+	},
+]
 ---
 
 <Layout title="Welcome to Astro.">
 	<NavBar />
 	<main>
-		<h1>Hello</h1>
+		<section class="min-h-screen">
+			<!-- max-w-screen-xl -->
+			<div class="mx-auto min-h-screen px-4 py-32 md:pt-44 flex items-center">
+				<svg
+					class="absolute z-0 h-[175px] w-[100%] md:h-[300px] md:w-[500px] lg:h-[400px] lg:w-[800px] opacity-60 top-20 lg:top-28 left-1/2 -translate-x-1/2"
+					set:html={innerHTML}
+				/>
+
+				<div class="z-10 mx-auto max-w-3xl text-center">
+					<h1
+						class="bg-gradient-to-r from-[#ECBF43] to-[#E2825D] bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl"
+					>
+						Transforma tus ideas en productos unicos y personalizado con nosotros.
+					</h1>
+
+					<div class="mt-8 flex flex-wrap justify-center gap-4">
+						<a
+							class="block w-full rounded border border-[#E2825D] bg-[#E2825D] px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
+							href="#"
+						>
+							Catálogo
+						</a>
+
+						<!-- <a
+							class="block w-full rounded border border-blue-600 px-12 py-3 text-sm font-medium text-white hover:bg-blue-600 focus:outline-none focus:ring active:bg-blue-500 sm:w-auto"
+							href="#"
+						>
+							Contactanos
+						</a> -->
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="catalogo" class="min-h-screen pt-20 mx-auto max-w-screen-xl px-4 pb-20">
+			<header class="text-center">
+				<h1 class="text-3xl font-medium tracking-tight text-white">
+					¡Descubre un mundo de posibilidades con Malecho!
+				</h1>
+				<p class="mt-2 text-lg text-gray-300 lg:w-1/2 lg:mx-auto">
+					Encuentra productos promocionales exclusivos, con opciones creativas e
+					innovadoras que darán vida a tus diseños, logos y eventos.
+				</p>
+				<p class="mt-2 text-lg text-gray-300 lg:w-1/2 lg:mx-auto">
+					Solicita tu presupuesto personalizado por correo malecho@gmail.com o por
+					WhatsApp. Con Malecho, la creatividad a tu alcance.
+				</p>
+			</header>
+
+			<div class="pt-20 flex flex-col gap-4 md:grid md:grid-cols-2 lg:grid-cols-4">
+				{
+					products.map(product => (
+						<Card
+							image={product.image}
+							title={product.title}
+							description={product.description}
+						/>
+					))
+				}
+			</div>
+		</section>
 	</main>
+	<Footer />
 </Layout>
 
 <style></style>

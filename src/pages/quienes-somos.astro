@@ -1,0 +1,71 @@
+---
+import Footer from '../components/Footer.astro'
+import NavBar from '../components/NavBar.astro'
+import Layout from '../layouts/Layout.astro'
+---
+
+<!-- <p class="pt-10">
+    Somos un negocio con historia salvadoreña en donde su nombre Malecho por su resonancia
+    de cultura salvadoreña, evocando una situacion en la que se refiere a su hijo que no
+    logra completar una tarea asignada por sus padres, este nombre refleja el humor y la
+    familiaridad de la identidad nacional, ademas de distanciarse de los nombnres
+    convencionales en el ambito de la sublimacion.
+</p>
+<p>
+    Malecho se enfoca en hacer sublimado y DTF en los distintos productos que se ofrecen
+    haciendo destacar en que tu eliges el diseño que quireas en el producto que desees
+    comprar ya sea personal, regalo o para tu propio negocio o empresa.
+</p> -->
+<Layout title="Malecho store">
+	<NavBar />
+	<main class="min-h-screen pt-20 mx-auto max-w-screen-xl px-8 pb-8">
+		<div class="pt-10 grid lg:grid-cols-2 justify-items-center mb-10">
+			<article class="">
+				<h1 class="text-4xl border-b-2 inline pb-3">Quienes somos</h1>
+				<p class="mt-10">
+					Somos un negocio que tiene historia salvadoreña y tiene un nombre llamado
+					Malecho. Este nombre refleja el humor y la familiaridad de la identidad
+					nacional, además de distanciarse de los nombres tradicionales en el ámbito de la
+					sublimación.
+				</p>
+				<p class="pt-4">
+					Malecho se enfoca en hacer sublimado y DTF en los distintos productos que se
+					ofrecen, haciendo destacar en que tú eliges el diseño que quieras en el producto
+					que desees comprar, ya sea personal, regalo o para tu propio negocio o empresa.
+				</p>
+			</article>
+			<div class="relative">
+				<img
+					src="/ejemplo1.png"
+					alt="ejemplo de camisa"
+					class="w-full md:w-80 lg:w-96 z-10 rotate-6"
+				/>
+				<img
+					src="/ejemplo2.png"
+					alt="ejemplo de camisa"
+					class="absolute top-8 -left-8 lg:top-2 lg:-left-11 -rotate-45 -z-10 w-full md:w-80 lg:w-96"
+				/>
+			</div>
+		</div>
+		<div class="grid gap-4 md:grid-cols-2">
+			<div class="bg-gray-900 p-6 rounded-md shadow-lg">
+				<h2 class="font-semibold text-lg mb-2">MISION</h2>
+				<p>
+					Somos una empresa que ofrece a nuestros clientes la mejor calidad y variedad de
+					productos personalizados. Brindando soluciones creativas y originales en el
+					diseño y estampado de prendas, accesorios y artículos promocionales.
+				</p>
+			</div>
+			<div class="bg-gray-900 p-6 rounded-md shadow-lg">
+				<h2 class="font-semibold text-lg mb-2">VISION</h2>
+				<p>
+					En 2026 ser una empresa de estampado que se destaca por su creatividad, calidad
+					y servicio excepcional, que cuenta con un equipo de diseñadores talentosos y
+					experimentados que trabajan en estrecha colaboración con los clientes para crear
+					diseños únicos y personalizados.
+				</p>
+			</div>
+		</div>
+	</main>
+	<Footer />
+</Layout>

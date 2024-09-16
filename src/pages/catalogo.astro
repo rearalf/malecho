@@ -1,13 +1,12 @@
 ---
+import Footer from '../components/Footer.astro'
 import NavBar from '../components/NavBar.astro'
 import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout title="Malecho store">
 	<NavBar />
-	<main
-		class="min-h-screen pt-20 mx-auto max-w-screen-xl px-4 flex items-center justify-center"
-	>
+	<main class="min-h-screen pt-20 mx-auto max-w-screen-xl px-4 flex items-center justify-center">
 		<div class="relative">
 			<!-- Botón de retroceso -->
 			<button
@@ -25,14 +24,46 @@ import Layout from '../layouts/Layout.astro'
 			>
 
 			<div class="slider relative flex overflow-hidden w-[325px] md:w-[500px]">
-				<img src="/catalogo-malecho/1.png" alt="page 1" class="w-full object-cover rounded-md" />
-				<img src="/catalogo-malecho/4.png" alt="page 4" class="w-full object-cover rounded-md" />
-				<img src="/catalogo-malecho/5.png" alt="page 5" class="w-full object-cover rounded-md" />
-				<img src="/catalogo-malecho/6.png" alt="page 6" class="w-full object-cover rounded-md" />
-				<img src="/catalogo-malecho/7.png" alt="page 7" class="w-full object-cover rounded-md" />
-				<img src="/catalogo-malecho/8.png" alt="page 8" class="w-full object-cover rounded-md" />
-				<img src="/catalogo-malecho/9.png" alt="page 9" class="w-full object-cover rounded-md" />
-				<img src="/catalogo-malecho/10.png" alt="page 10" class="w-full object-cover rounded-md" />
+				<img
+					src="/catalogo-malecho/1.png"
+					alt="page 1"
+					class="w-full object-cover rounded-md"
+				/>
+				<img
+					src="/catalogo-malecho/4.png"
+					alt="page 4"
+					class="w-full object-cover rounded-md"
+				/>
+				<img
+					src="/catalogo-malecho/5.png"
+					alt="page 5"
+					class="w-full object-cover rounded-md"
+				/>
+				<img
+					src="/catalogo-malecho/6.png"
+					alt="page 6"
+					class="w-full object-cover rounded-md"
+				/>
+				<img
+					src="/catalogo-malecho/7.png"
+					alt="page 7"
+					class="w-full object-cover rounded-md"
+				/>
+				<img
+					src="/catalogo-malecho/8.png"
+					alt="page 8"
+					class="w-full object-cover rounded-md"
+				/>
+				<img
+					src="/catalogo-malecho/9.png"
+					alt="page 9"
+					class="w-full object-cover rounded-md"
+				/>
+				<img
+					src="/catalogo-malecho/10.png"
+					alt="page 10"
+					class="w-full object-cover rounded-md"
+				/>
 			</div>
 
 			<!-- Botón de avance -->
@@ -51,6 +82,7 @@ import Layout from '../layouts/Layout.astro'
 			>
 		</div>
 	</main>
+	<Footer />
 </Layout>
 
 <style>

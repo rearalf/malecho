@@ -1,0 +1,84 @@
+---
+import NavBar from '../components/NavBar.astro'
+import Layout from '../layouts/Layout.astro'
+---
+
+<Layout title="Malecho store">
+	<NavBar />
+	<main
+		class="min-h-screen pt-20 mx-auto max-w-screen-xl px-4 flex items-center justify-center"
+	>
+		<div class="relative">
+			<!-- Botón de retroceso -->
+			<button
+				id="prev"
+				class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-2 py-1 rounded z-10"
+				><svg
+					xmlns="http://www.w3.org/2000/svg"
+					height="24px"
+					viewBox="0 -960 960 960"
+					width="24px"
+					fill="#e8eaed"
+					><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"
+					></path></svg
+				></button
+			>
+
+			<div class="slider relative flex overflow-hidden w-[325px] md:w-[500px]">
+				<img src="/catalogo-malecho/1.png" alt="page 1" class="w-full object-cover rounded-md" />
+				<img src="/catalogo-malecho/4.png" alt="page 4" class="w-full object-cover rounded-md" />
+				<img src="/catalogo-malecho/5.png" alt="page 5" class="w-full object-cover rounded-md" />
+				<img src="/catalogo-malecho/6.png" alt="page 6" class="w-full object-cover rounded-md" />
+				<img src="/catalogo-malecho/7.png" alt="page 7" class="w-full object-cover rounded-md" />
+				<img src="/catalogo-malecho/8.png" alt="page 8" class="w-full object-cover rounded-md" />
+				<img src="/catalogo-malecho/9.png" alt="page 9" class="w-full object-cover rounded-md" />
+				<img src="/catalogo-malecho/10.png" alt="page 10" class="w-full object-cover rounded-md" />
+			</div>
+
+			<!-- Botón de avance -->
+			<button
+				id="next"
+				class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white px-2 py-1 rounded z-10"
+				><svg
+					xmlns="http://www.w3.org/2000/svg"
+					height="24px"
+					viewBox="0 -960 960 960"
+					width="24px"
+					fill="#e8eaed"
+					><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
+					></path></svg
+				></button
+			>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	.slider {
+		aspect-ratio: 10/16;
+		scroll-snap-type: x mandatory;
+		scroll-behavior: smooth;
+	}
+
+	img {
+		scroll-snap-align: start;
+	}
+</style>
+
+<script>
+	const slider = document.querySelector('.slider')
+	const prevBtn = document.getElementById('prev')
+	const nextBtn = document.getElementById('next')
+
+	if (nextBtn !== null && slider !== null) {
+		nextBtn.addEventListener('click', () => {
+			slider.scrollBy({ left: slider.clientWidth, behavior: 'smooth' })
+		})
+	}
+
+	if (prevBtn !== null && slider !== null) {
+		prevBtn.addEventListener('click', () => {
+			slider.scrollBy({ left: -slider.clientWidth, behavior: 'smooth' })
+		})
+	}
+</script>
